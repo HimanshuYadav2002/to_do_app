@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
   void savetask() {
     setState(() {
       db.todolist.add([controller.text, false]);
+      controller.clear();
     });
     Navigator.pop(context);
     db.updateData();
